@@ -30,6 +30,37 @@ updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMEST
 foreign key (user_id) references users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
+CREATE TABLE coursework (
+id int primary key auto_increment,
+user_id int NOT NULL,
+course_code VARCHAR(20) NOT NULL,
+course_title VARCHAR(100) NOT NULL,
+semester VARCHAR(30),
+description TEXT,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+foreign key (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE projects (
+id int primary key auto_increment,
+user_id int NOT NULL,
+title VARCHAR(100) NOT NULL,
+description TEXT,
+link VARCHAR(255),
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+foreign key (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE messages (
+id int primary key auto_increment,
+user_id int NOT NULL,
+from_name VARCHAR(100) NOT NULL,
+from_email VARCHAR(120) NOT NULL,
+message TEXT NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+foreign key (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
 INSERT INTO users(username,email,password_hash) VALUES
 ('sbunning','sbunning@gmail.com','Password123!'),
 ('agarcia', 'agarcia@gmail.com', 'Password1234!');
