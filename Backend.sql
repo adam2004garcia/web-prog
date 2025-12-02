@@ -51,16 +51,6 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 foreign key (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE messages (
-id int primary key auto_increment,
-user_id int NOT NULL,
-from_name VARCHAR(100) NOT NULL,
-from_email VARCHAR(120) NOT NULL,
-message TEXT NOT NULL,
-created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-foreign key (user_id) REFERENCES users(id) ON DELETE CASCADE
-) ENGINE=InnoDB;
-
 INSERT INTO users(username,email,password_hash) VALUES
 ('sbunning','sbunning@gmail.com','Password123!'),
 ('agarcia', 'agarcia@gmail.com', 'Password1234!');
