@@ -51,6 +51,10 @@ body {
     margin-bottom: 16px;
 }
 
+.form-actions { 
+    margin-top: 12px;
+}
+
 .form-group label {
     display: block;
     margin-bottom: 6px;
