@@ -29,8 +29,26 @@ SQL models
 JSP files
 Session handling
 
+
 Adam Garcia
 JSP frontend
 Testing 
 Project structure
+
+
+Tools & Libraries Used:
+
+HTML5
+Java.
+CSS
+MySQL
+VS Code
+NetBeans
+JSP files
+Java Servlets
+GitHub Pages
+
+
+
+
 
