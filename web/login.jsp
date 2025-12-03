@@ -14,7 +14,7 @@
            
            <label>Username:</label>
            <input type="text" name="username" required><br><br>
-           <<label>Password:</label>
+           <label>Password:</label>
            <input type="password" name="password" required><br><br>
            
            <button type="Submit">Login</button>

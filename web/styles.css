@@ -135,7 +135,12 @@ body {
 
 /* TOP NAVBAR */
 .top-nav {
-    ...
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 12px 24px;
+    background: rgba(15, 23, 42, 0.9);
 }
 
 /* PROFILE LAYOUT */
